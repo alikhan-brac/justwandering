@@ -37,4 +37,14 @@
         </dependency>
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.17.0</version> <!-- Use the appropriate version -->
+            </plugin>
+        </plugins>
+    </build>
 </project>

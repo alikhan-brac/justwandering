@@ -6,7 +6,7 @@ import aquality.selenium.browser.Browser;
 public class BrowserUtil {
     private static final String BASE_URL = "http://uitestingplayground.com/";
 
-    private static Browser getBrowser() {
+    public static Browser getBrowser() {
         return AqualityServices.getBrowser();
     }
 

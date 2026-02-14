@@ -14,7 +14,6 @@ public class SampleAppTest extends BaseTest {
     private final String expectedText = String.format("Welcome, %s!", userId);
     private final String password = "pwd";
 
-
     @Test()
     public void sampleAppTest() {
         homePage.state().isDisplayed();
