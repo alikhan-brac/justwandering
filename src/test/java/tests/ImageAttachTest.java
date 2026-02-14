@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class ImageAttachTest extends BaseTest{
+public class ImageAttachTest extends BaseTest{              //>>>added in this project on 14-Feb-2026
     private final String screenshotFileName = "src/main/resources/screenshot.jpeg";
 
     @Attachment(value = "Screenshot", type = "image/jpeg")
