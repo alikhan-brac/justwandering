@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >
+<suite name="Practice suite">
+
+    <test name="Attach a Label">
+        <classes>
+            <class name="tests.LabelTest"/>
+        </classes>
+    </test>
+
+</suite>
