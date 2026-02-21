@@ -12,10 +12,18 @@ import static io.qameta.allure.SeverityLevel.NORMAL;
 public class LabelTest {
 
     @Severity(NORMAL)
-    @Owner("John Doe")
+    @Owner("Johnathan")
     @Test(description = "Test with Allure 3 label annotation")
     public void labelForAllure3Test() {
+        // Get owner from system property (passed from Jenkins)
+        String owner = System.getProperty("test.owner", "Jonthan-default");
+
+        // Set the owner label dynamically - THIS OVERWRITES @Owner annotation
+        Allure.label("owner", owner);
+
+        // Also set custom "Responsible" label if needed
         Allure.label("Responsible", "Egor Sokolov");
+
         stepChecking();
     }
 
