@@ -12,7 +12,7 @@ import static io.qameta.allure.SeverityLevel.NORMAL;
 public class LabelTest {
 
     @Severity(NORMAL)
-    @Owner("Pete David")
+    @Owner("Tom Smith")
     @Test(description = "Test with Allure 3 label annotation")
     public void labelForAllure3Test() {
         // Get owner from system property (passed from Jenkins)
