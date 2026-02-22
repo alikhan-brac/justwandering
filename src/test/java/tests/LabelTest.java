@@ -10,22 +10,17 @@ import org.testng.annotations.Test;
 import static io.qameta.allure.SeverityLevel.NORMAL;
 
 public class LabelTest {
+    private final String customizedLabel = System.getProperty("test.customizedLabel", "Responsible");
+    private final String customizedLabelValue = System.getProperty("test.customizedLabelValue", "Jonthan-default");
 
     @Severity(NORMAL)
     @Owner("Tom Smith")
     @Test(description = "Test with Allure 3 label annotation")
     public void labelForAllure3Test() {
-        // Get owner from system property (passed from Jenkins)
-        //String owner = System.getProperty("test.owner", "Jonthan-default");
+//        String responsible = System.getProperty("test.responsible", "Jonthan-default");
+//        Allure.label("Responsible", responsible);
 
-        // Set the owner label dynamically - THIS OVERWRITES @Owner annotation
-        //Allure.label("owner", owner);
-
-        String responsible = System.getProperty("test.responsible", "Jonthan-default");
-        Allure.label("Responsible", responsible);
-        // Also set custom "Responsible" label if needed
-        //Allure.label("Responsible", "Egor Sokolov");
-
+        Allure.label(customizedLabel, customizedLabelValue);
         stepChecking();
     }
 
