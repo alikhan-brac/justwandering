@@ -10,17 +10,13 @@ import org.testng.annotations.Test;
 import static io.qameta.allure.SeverityLevel.NORMAL;
 
 public class LabelTest {
-    private final String customizedLabel = System.getProperty("test.customizedLabel", "Responsible");
-    private final String customizedLabelValue = System.getProperty("test.customizedLabelValue", "Jonthan-default");
 
     @Severity(NORMAL)
     @Owner("Tom Smith")
     @Test(description = "Test with Allure 3 label annotation")
     public void labelForAllure3Test() {
-//        String responsible = System.getProperty("test.responsible", "Jonthan-default");
-//        Allure.label("Responsible", responsible);
-
-        Allure.label(customizedLabel, customizedLabelValue);
+        String responsibleName = System.getProperty("test.responsible", "Jonathan");
+        Allure.label("Responsible", responsibleName);
         stepChecking();
     }
 
