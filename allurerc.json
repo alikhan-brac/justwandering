@@ -1,0 +1,6 @@
+{
+    "name": "Allure Report - with hisss",
+    "output": "./allure-report",
+    "historyPath": "./allure/history.jsonl",
+    "appendHistory": true
+}
