@@ -1,5 +1,0 @@
-{
-    "name": "Allure Report - with history",
-    "historyPath": "./history.jsonl",
-    "appendHistory": true
-}
